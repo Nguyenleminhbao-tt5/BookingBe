@@ -10,7 +10,7 @@ $ yarn start:dev
 
 ## Link deploy
 
-[Vercel](https://booking-be-ivory.vercel.app/) : link deploy on vercel
+[Vercel](https://booking-be-beta.vercel.app) : link deploy on vercel
 
 ## Link API documentation
 
