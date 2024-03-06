@@ -11,7 +11,7 @@ export class AppControler{
         return {
             code: HttpStatus.OK,
             type: "Success",
-            data: "Welcome to Booking.com"
+            data: "Welcome to Booking.com "
         }
     }
 }

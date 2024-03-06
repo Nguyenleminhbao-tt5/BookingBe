@@ -16,7 +16,7 @@ let AppControler = class AppControler {
         return {
             code: common_1.HttpStatus.OK,
             type: "Success",
-            data: "Welcome to Booking.com"
+            data: "Welcome to Booking.com "
         };
     }
 };

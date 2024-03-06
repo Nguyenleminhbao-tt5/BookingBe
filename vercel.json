@@ -1,7 +1,7 @@
 {
     "version": 2,
     "env": {
-      "D0MAIN_APP": "https://booking-be-ivory.vercel.app",
+      "D0MAIN_APP": "https://booking-be-beta.vercel.app",
       "SUPABASE_URL":"https://rpivhcrolowynpauviim.supabase.co",
       "SUPABASE_API_KEY":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJwaXZoY3JvbG93eW5wYXV2aWltIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTcwOTU2MTUzMiwiZXhwIjoyMDI1MTM3NTMyfQ.x0reWc6BWzOs4i0gVBXD_EC8JJ-Ist8WUXnw9NHj350",
       "GOOGLE_CLIENT_ID":"615301588543-kpbbsblmlak1ro0tm5bpda64l3vva0b1.apps.googleusercontent.com",
@@ -24,7 +24,8 @@
           "GET",
           "POST",
           "PUT",
-          "DELETE"
+          "DELETE",
+          "OPTIONS"
         ]
       }
     ]
