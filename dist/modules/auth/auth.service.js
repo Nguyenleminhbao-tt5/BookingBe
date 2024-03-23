@@ -112,6 +112,9 @@ let AuthService = class AuthService {
     }
     async login(userInfo) {
         try {
+            if (userInfo?.code == common_1.HttpStatus?.BAD_REQUEST || userInfo?.code == common_1.HttpStatus.INTERNAL_SERVER_ERROR) {
+                return userInfo;
+            }
             userInfo = {
                 ...userInfo,
                 accessToken: await this.convertToJwtString(userInfo.id),

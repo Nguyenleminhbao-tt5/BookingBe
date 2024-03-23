@@ -9,7 +9,7 @@ export declare class AuthService {
     private readonly jwtService;
     private supabase;
     constructor(supabaseService: SupabaseService, jwtService: JwtService);
-    authentication(email: string, password: string): Promise<IResponse | IUser | {
+    authentication(email: string, password: string): Promise<IUser | IResponse | {
         code: HttpStatus;
         type: string;
         data: string;
@@ -19,11 +19,7 @@ export declare class AuthService {
         type: string;
         data: any;
     }>;
-    login(userInfo: IUser): Promise<IResponse | {
-        code: HttpStatus;
-        type: string;
-        data: IUser;
-    }>;
+    login(userInfo: IUser | any): Promise<any>;
     signUp(userInfo: AuthDto): Promise<IResponse | {
         code: HttpStatus;
         type: string;

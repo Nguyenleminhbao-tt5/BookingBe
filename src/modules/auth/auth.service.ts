@@ -28,7 +28,7 @@ export class AuthService {
         .single();
 
       if (!data) {
-        throw {
+        return {
           code: HttpStatus.BAD_REQUEST,
           type: 'Error',
           data: 'User not found',
@@ -106,8 +106,12 @@ export class AuthService {
     }
   }
 
-  async login(userInfo: IUser) {
+  async login(userInfo: IUser | any) {
     try {
+      
+      if (userInfo?.code == HttpStatus?.BAD_REQUEST || userInfo?.code == HttpStatus.INTERNAL_SERVER_ERROR){
+        return userInfo;
+      }
       
       userInfo  = {
         ...userInfo,

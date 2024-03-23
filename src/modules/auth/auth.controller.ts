@@ -15,6 +15,7 @@ export class AuthController {
   @Post('login')
   async login(@Req() request: Request) {
     try {
+      
       return this.authService.login(request.user as IUser);
     } catch (err) {
       throw err;
