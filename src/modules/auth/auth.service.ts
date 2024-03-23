@@ -28,7 +28,7 @@ export class AuthService {
         .single();
 
       if (!data) {
-        return {
+        throw {
           code: HttpStatus.BAD_REQUEST,
           type: 'Error',
           data: 'User not found',
@@ -108,7 +108,8 @@ export class AuthService {
 
   async login(userInfo: IUser) {
     try {
-      userInfo = {
+      
+      userInfo  = {
         ...userInfo,
         accessToken: await this.convertToJwtString(userInfo.id),
       };
